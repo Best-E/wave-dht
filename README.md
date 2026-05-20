@@ -17,4 +17,4 @@ Tested at 1M nodes, 30% churn, 1000 lookups:
 
 ## Install
 ```bash
-go get github.com/yourname/wave-dht
+go get github.com/best-e/wave-dht
