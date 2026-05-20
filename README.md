@@ -15,6 +15,16 @@ Tested at 1M nodes, 30% churn, 1000 lookups:
 - **Messages/lookup**: 7.2
 - **Memory/node**: 5MB
 
+  ## Use it in Go
+  import "github.com/best-e/wave-dht"
+
+cfg := wave.DefaultConfig()
+dht, _ := wave.NewDHT(cfg)
+dht.Start()
+
+dht.Store(ctx, "user:123", "alice")
+val, ok := dht.Get(ctx, "user:123")
+
 ## Install
 ```bash
 go get github.com/best-e/wave-dht
