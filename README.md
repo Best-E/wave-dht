@@ -25,6 +25,12 @@ dht.Start()
 dht.Store(ctx, "user:123", "alice")
 val, ok := dht.Get(ctx, "user:123")
 
+## HTTP API 
+. POST /put body: {"k" : "key" , "v" : "value"}
+. GET /get?k=key
+.GET /status
+.GET /metrics for Prometheus
+
 ## Install
 ```bash
 go get github.com/best-e/wave-dht
