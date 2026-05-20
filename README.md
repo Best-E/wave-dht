@@ -15,6 +15,12 @@ Tested at 1M nodes, 30% churn, 1000 lookups:
 - **Messages/lookup**: 7.2
 - **Memory/node**: 5MB
 
+  ## Run a cluster
+  ```bash
+  docker compose up
+  ```
+  Opens Grafana at localhost:3000, admin/admin
+
   ## Use it in Go
   import "github.com/best-e/wave-dht"
 
