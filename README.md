@@ -31,6 +31,16 @@ val, ok := dht.Get(ctx, "user:123")
 - **GET /status**
 - **GET /metrics for Prometheus**
 
+  ## When to use this
+- Edge computing, IoT, spot instances
+- P2p apps, gaming, messaging
+- Service discovery in high-churn k8s
+- Distributed cache when Redis isn't an option
+## When NOT to use this
+- Need strong consistency/transactions
+- 5 stable servers in AWS. Use Redis Cluster instead
+- Need SQL queries. This is K/V only
+
 ## Install
 ```bash
 go get github.com/best-e/wave-dht
